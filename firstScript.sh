@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "Hello world sdjgfhsdd"
+echo "Hello world sdjgsdd"
