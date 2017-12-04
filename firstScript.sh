@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "Hello world completessssssssssss"
+echo "Hello world completesssss"
