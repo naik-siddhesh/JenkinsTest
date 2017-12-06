@@ -1,0 +1,76 @@
+{
+    "configurations": [
+        {
+            "name": "dev",
+            "policies": [
+                {
+                    "name": "AssignQueryParam.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/AssignMessage/Set/QueryParams/QueryParam[@name='Server']",
+                            "value": "httpbin"
+                        }
+                    ]
+                }
+            ],
+            "proxies": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/mavenplugin"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
+                            "value": "https://httpbin.org/response-headers"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "qa",
+            "policies": [
+                {
+                    "name": "AssignQueryParam.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/AssignMessage/Set/QueryParams/QueryParam[@name='Server']",
+                            "value": "httpbin"
+                        }
+                    ]
+                }
+            ],
+            "proxies": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/mavenplugin"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
+                            "value": "https://httpbin.org/response-headers"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>parent-pom</artifactId>
+        <groupId>apigee</groupId>
+        <version>1.0</version>
+        <relativePath>../shared-pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>apigee</groupId>
+    <artifactId>mavenplugintest</artifactId>
+    <version>1.0</version>
+    <name>mavenplugintest</name>
+    <packaging>pom</packaging>
+
+    <pluginRepositories>
+    <pluginRepository>
+      <id>smartbear-sweden-plugin-repository</id>
+      <url>http://www.soapui.org/repository/maven2/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.9</version>
+        <configuration>
+          <systemProperties>
+            <!-- <property>
+              <name>endPointUrl</name>
+              <value>${endPointUrl}</value>
+            </property> -->
+          </systemProperties>
+        </configuration>
+      </plugin>
+    
+      <plugin>
+        <groupId>com.smartbear.soapui</groupId>
+        <artifactId>soapui-maven-plugin</artifactId>
+        <version>4.6.1</version>
+        <executions>
+          <execution>
+            <id>SampleTestCase</id>
+            <goals>
+              <goal>test</goal>
+            </goals>
+            <phase>install</phase>
+          </execution>
+        </executions>
+        <configuration>
+          <projectFile>${basedir}/tests/MavenPluginTest-soapui-project.xml</projectFile>
+          <testSuite>MavenTestSuite</testSuite>
+          
+          <!--  <testCase>Attribute Values</testCase> -->
+         <!--  <endpoint>${endPointUrl}</endpoint>  -->
+          <!-- <endpoint>http://tparheapiq001.enterprisenet.org:8080/ndx-api-service</endpoint>  -->
+          <outputFolder>${basedir}/output</outputFolder>
+          <junitReport>true</junitReport>
+          <printReport>true</printReport>
+          <!-- <projectProperties>
+            <projectProperty>UserId=Runubala.Jena.ap@nielsen.com</projectProperty>
+            <projectProperty>Content-Type=application/json</projectProperty>
+          </projectProperties> -->
+         <settingsFile>C:\Users\681152\soapui-settings.xml</settingsFile>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
