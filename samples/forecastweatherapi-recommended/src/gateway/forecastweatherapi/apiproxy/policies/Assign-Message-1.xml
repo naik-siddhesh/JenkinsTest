@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-1">
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-1_new">
     <DisplayName>Assign Message 1</DisplayName>
     <Set>
         <Headers>

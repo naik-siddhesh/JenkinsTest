@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<XMLToJSON async="false" continueOnError="false" enabled="true" name="xmltojson-1">
-    <DisplayName>XMLtoJSON-1</DisplayName>
+<XMLToJSON async="false" continueOnError="false" enabled="true" name="xmltojson-1_new">
+    <DisplayName>xmltojson-1_new</DisplayName>
     <FaultRules/>
     <Properties/>
     <Format>yahoo</Format>
